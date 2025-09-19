@@ -23,30 +23,7 @@ export const useToxicityDetection = () => {
    * 3. Retornar verdadeiro se qualquer categoria for detectada
    */
   const checkToxicity = async (text: string): Promise<boolean> => {
-    if (!toxicityModel) {
-      setError('Toxicity model not loaded yet');
-    }
-
-    setIsLoading(true);
-    setError(null);
-
-    try {
-      // TENSORFLOW.JS PREDICT: Executa inferência no modelo global
-      const predictions = await toxicityModel.classify([text]);
-            
-      // Verifica se alguma categoria de toxicidade foi detectada
-      const isToxic = predictions.some(prediction => {
-        const result = prediction.results[0];
-        return result.match; // true se o modelo detectou toxicidade
-      });
-      
-      return isToxic;
-    } catch (err) {
-      setError('Failed to check comment toxicity');
-      return false;
-    } finally {
-      setIsLoading(false);
-    }
+    return console.log("Toxicity detection is currently disabled."), false;
   };
 
   return {

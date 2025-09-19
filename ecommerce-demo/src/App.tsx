@@ -17,18 +17,6 @@ const queryClient = new QueryClient();
 export let toxicityModel: toxicity.ToxicityClassifier | null = null;
 
 const App = () => {
-  useEffect(() => {
-    // Initialize TensorFlow.js backend and load models
-    tf.ready().then(async () => {
-      
-      // Load toxicity model once for the entire app
-      try {
-        toxicityModel = await toxicity.load(0.7, []);
-      } catch (error) {
-        console.error('❌ Failed to load toxicity model:', error);
-      }
-    });
-  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>

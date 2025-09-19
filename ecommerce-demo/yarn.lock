@@ -1269,7 +1269,7 @@
 
 "@tensorflow-models/toxicity@^1.2.2":
   version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@tensorflow-models/toxicity/-/toxicity-1.2.2.tgz#aed2cc92122f2fc949b42502bb55f8ed2e1d03a8"
+  resolved "https://registry.npmjs.org/@tensorflow-models/toxicity/-/toxicity-1.2.2.tgz"
   integrity sha512-DSMIoBzNyX7+4D4cGKjsFLbCuJz3bksYpwFHKAjTp4+tmgAGpNyg5nDXXI/IQp18nMTbLKgLruLWOxq5y7P4WQ==
   dependencies:
     "@tensorflow-models/universal-sentence-encoder" "~1.2.2"
